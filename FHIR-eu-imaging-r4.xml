@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/imaging/xtehr" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging">
-<version code="current" url=""/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/imaging/xtehr" ciUrl="https://build.fhir.org/ig/hl7-eu/imaging-r4" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/imaging">
+<version code="current" url="https://build.fhir.org/ig/hl7-eu/imaging-r4"/>
 <version code="1.0.0-alpha" url="http://hl7.eu/fhir/imaging/xtehr"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
