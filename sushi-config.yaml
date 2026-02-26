@@ -5,7 +5,7 @@ title: HL7 Europe Imaging Report R4
 description: This guide describes how a Imaging Report can be represented in the European REALM using FHIR R4.
 status: draft # draft | active | retired | unknown
 experimental: false
-version: 0.1.1-build
+version: 0.2.0-connecthaton
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 #fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2025+
@@ -34,7 +34,8 @@ dependencies:
   # hl7.terminology.r4: 7.0.1
   
     
-  hl7.fhir.eu.eu-health-data-api: current
+  # removed to prevent dependency on unpublished spec
+  # hl7.fhir.eu.eu-health-data-api: current
   ihe.iti.mhd: 4.2.3
   # eu.ehds.models: 0.1.0
   # eu.ehds.models: current
