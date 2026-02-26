@@ -1,5 +1,5 @@
 {
-  "package-id" : "hl7.fhir.eu.imaging-r4",
+  "package-id" : "hl7.fhir.eu.imaging",
   "version" : "1.0.0-alpha",
   "path" : "http://hl7.eu/fhir/imaging/xtehr",
   "ci-build": "https://build.fhir.org/ig/hl7-eu/imaging-r4",
