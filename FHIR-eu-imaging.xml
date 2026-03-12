@@ -11,9 +11,9 @@
 <artifact id="StructureDefinition/AdverseEventEuImaging" key="StructureDefinition-AdverseEventEuImaging" name="AdverseEvent: Imaging Adverse Event"/>
 <artifact id="StructureDefinition/SrInstanceImagingSelectionEuImaging" key="StructureDefinition-SrInstanceImagingSelectionEuImaging" name="Basic-ImagingSelection: DICOM SR Instance"/>
 <artifact id="StructureDefinition/ImagingSelectionEuImaging" key="StructureDefinition-ImagingSelectionEuImaging" name="Basic-ImagingSelection: General"/>
-<artifact id="Binary/BinarySemistructuredReport" key="Binary-BinarySemistructuredReport" name="BinarySemistructuredReport"/>
-<artifact id="Binary/BinaryStructuredReport" key="Binary-BinaryStructuredReport" name="BinaryStructuredReport"/>
-<artifact id="Binary/BinaryUnstructuredReport" key="Binary-BinaryUnstructuredReport" name="BinaryUnstructuredReport"/>
+<artifact id="Binary/BinarySemistructuredReport" key="Binary-BinarySemistructuredReport" name="Binary Semistructured Report"/>
+<artifact id="Binary/BinaryStructuredReport" key="Binary-BinaryStructuredReport" name="Binary Structured Report"/>
+<artifact id="Binary/BinaryUnstructuredReport" key="Binary-BinaryUnstructuredReport" name="Binary Unstructured Report"/>
 <artifact id="StructureDefinition/BundleReportEuImaging" key="StructureDefinition-BundleReportEuImaging" name="Bundle: Imaging Report"/>
 <artifact id="StructureDefinition/BundleReportMinimalMetadataEuImaging" key="StructureDefinition-BundleReportMinimalMetadataEuImaging" name="Bundle: Imaging Report Minimal Metadata"/>
 <artifact id="Bundle/bundle-report-minimal-metadata-unstructured" key="Bundle-bundle-report-minimal-metadata-unstructured" name="Bundle: Imaging Report minimal metadata (unstructured example)"/>

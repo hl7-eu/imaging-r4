@@ -37,7 +37,7 @@ dependencies:
     uri: http://terminology.hl7.org/ImplementationGuide/hl7.terminology
     version: 7.1.0
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
-  ihe.iti.mhd: 5.0.0
+  ihe.iti.mhd: 4.2.3
   
 
     
