@@ -141,9 +141,6 @@ BUNDLE_BUNDLE_ENTRY_REVERSE_R4
 # Definitions not found
 A definition could not be found for Canonical URL 'http://www.rsna.org/RadLex_Playbook.aspx'
 
-# Unknown code system
-UNKNOWN_CODESYSTEM
-
 # The display in the ValueSet does not match with any known display
 VALUESET_CODE_CONCEPT_HINT
 
@@ -152,3 +149,6 @@ Type_Specific_Checks_DT_URL_Resolve
 
 # not valid url
 The URL is not valid because '(URL contains 4 Invalid Characters: '\')': file://C:\zFHIR-publication\hl7-eu\health-data-api\output/StructureDefinition-EehrxfMhdDocumentReference.html
+
+# Non matching slices
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/imaging/StructureDefinition/BundleReportEuImaging|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
