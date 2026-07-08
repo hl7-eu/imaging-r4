@@ -29,9 +29,6 @@ Description: "Obligations for DiagnosticReport: Imaging Report"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.header.author[x]"
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHOULD:process
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportConsumer)
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.header.author[x]"
 * resultsInterpreter[author]
   * ^requirements = "EHDSImagingReport.header.author[x]"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
@@ -79,7 +76,7 @@ Description: "Obligations for DiagnosticReport: Imaging Report"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.body.orderInformation.orderId"
 * extension[patientHistory]
   * ^requirements = "EHDSImagingReport.body.supportingInformation.observation; EHDSImagingReport.body.supportingInformation.condition; EHDSImagingReport.body.supportingInformation.priorMedicationAdministration; EHDSImagingReport.body.supportingInformation.device; EHDSImagingReport.body.supportingInformation.pregnancyStatus"
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHOULD:populate-if-known
+  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHOULD:able-to-populate
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.body.supportingInformation.observation, EHDSImagingReport.body.supportingInformation.condition, EHDSImagingReport.body.supportingInformation.priorMedicationAdministration, EHDSImagingReport.body.supportingInformation.device, EHDSImagingReport.body.supportingInformation.pregnancyStatus"
 * extension[procedure]
@@ -90,12 +87,7 @@ Description: "Obligations for DiagnosticReport: Imaging Report"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.body.exposureInformation, EHDSImagingReport.body.examinationReport.imagingProcedures"
-* extension[finding]
-  * ^requirements = "EHDSImagingReport.body.examinationReport.results[x]"
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
-  * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[documentation].valueMarkdown = "EHDSImagingReport.body.examinationReport.results[x]"
-* extension[note]
+* result
   * ^requirements = "EHDSImagingReport.body.examinationReport.results[x]; EHDSImagingReport.body.examinationReport.conclusion.impression"
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][+].extension[code].valueCode = #SHALL:able-to-populate
   * ^extension[http://hl7.org/fhir/StructureDefinition/obligation][=].extension[actor].valueCanonical = Canonical(EuImagingReportProducer)
