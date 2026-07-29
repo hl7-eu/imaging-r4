@@ -86,6 +86,25 @@ The `text` field of each section SHALL contain a textual representation of all l
 
 * status 
 
+// Relationship to a prior report: replacement or retraction (both use replaces).
+// Mirrors the FHIR Clinical Document Composition profile slicing.
+* relatesTo ^slicing.discriminator.type = #value
+* relatesTo ^slicing.discriminator.path = "code"
+//R5* relatesTo ^slicing.discriminator.path = "type"
+* relatesTo ^slicing.rules = #open
+* relatesTo contains replaced_document 0..1
+* relatesTo[replaced_document] ^short = "Prior report this one replaces or retracts"
+* relatesTo[replaced_document].code = #replaces
+* relatesTo[replaced_document].target[x] only Identifier
+* relatesTo[replaced_document].targetIdentifier 1..1
+//R5* relatesTo[replaced_document].type = #replaces
+//R5* relatesTo[replaced_document].resourceReference 1..1
+//R5* relatesTo[replaced_document].resourceReference.identifier 1..1
+//R5* relatesTo[replaced_document].resourceReference.reference 0..0
+
+
+* obeys eu-imaging-comp-status-succession
+
 * section.code 1..1 
 * section 
   * insert SliceElement( #value, code )
@@ -251,3 +270,11 @@ Invariant: eu-imaging-composition-2
 Description: "A section must contain at least one of text, entries, or sub-sections."
 Severity: #error 
 Expression: "text.exists() or entry.exists() or section.exists()"
+
+// ////////////////////////// Status <-> relatesTo correspondence //////////////////////////
+
+Invariant: eu-imaging-comp-status-succession
+Description: "A Composition that replaces or retracts a prior report SHALL have status final or entered-in-error."
+* severity = #error
+* expression = "relatesTo.where(code = 'replaces').exists() implies status in ('final' | 'entered-in-error')"
+//R5* expression = "relatesTo.where(type = 'replaces').exists() implies status in ('final' | 'entered-in-error')"
