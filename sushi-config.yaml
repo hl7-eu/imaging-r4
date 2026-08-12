@@ -3,6 +3,7 @@ id: hl7.fhir.eu.imaging
 canonical: http://hl7.eu/fhir/imaging
 
 
+
 name: HL7EuImagingStudyReport
 title: HL7 Europe Imaging Report R4
 description: This guide describes how a Imaging Report can be represented in the European REALM using FHIR R4.
@@ -51,6 +52,8 @@ dependencies:
     version: 0.0.1-snapshot-2
   ihe.iti.mhd: 4.2.3
   
+
+    
 
     
 
@@ -187,7 +190,8 @@ menu:
     Examples: artifacts.html#example-example-instances
 
 
-  R5: https://build.fhir.org/ig/hl7-eu/imaging-r5/
+  R5: https://build.fhir.org/ig/hl7-eu/imaging-r4/
+
 
 
   

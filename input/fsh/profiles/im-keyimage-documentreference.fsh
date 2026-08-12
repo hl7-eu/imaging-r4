@@ -36,11 +36,11 @@ When the resource represents a DICOM series it SHALL contain the Series Instance
   * identifier 1..1
   * identifier only AccessionNumberIdentifierEuImaging
 
-//R5* basedOn
-//R5  * insert SliceElement( #type, $this )
-//R5* basedOn contains ServiceRequestOrderEuImagingaccession 0..1
-//R5* insert BasedOnServiceRequestOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
-//R5* modality 1..1
+//R5-6* basedOn
+//R5-6  * insert SliceElement( #type, $this )
+//R5-6* basedOn contains ServiceRequestOrderEuImagingaccession 0..1
+//R5-6* insert BasedOnServiceRequestOrderEuImagingReference( ServiceRequestOrderEuImagingaccession )
+//R5-6* modality 1..1
 
 // type of image reference
 * type from http://terminology.hl7.org/ValueSet/image-reference-type (preferred)

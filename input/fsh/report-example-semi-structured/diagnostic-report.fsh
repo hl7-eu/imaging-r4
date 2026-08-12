@@ -22,14 +22,14 @@ Usage: #example
 * category[diagnostic-service] = http://terminology.hl7.org/CodeSystem/v2-0074#RAD "Radiologie"
 * subject = Reference(PatientSemiStructuredReport)
 * imagingStudy[+] = Reference(ImagingStudySemiStructuredReport1)
-//R5* study[+] = Reference(ImagingStudySemiStructuredReport1)
+//R5-6* study[+] = Reference(ImagingStudySemiStructuredReport1)
 * imagingStudy[+] = Reference(ImagingStudySemiStructuredReport2)
-//R5* study[+] = Reference(ImagingStudySemiStructuredReport2)
+//R5-6* study[+] = Reference(ImagingStudySemiStructuredReport2)
 * performer[organization] = Reference(OrganizationSemiStructuredReport)
 * resultsInterpreter[author] = Reference(PractitionerRoleSemiStructuredReportAuthor)
 
 * extension[composition].valueReference = Reference(CompositionSemiStructured)
-//R5* composition = Reference(CompositionSemiStructured)
+//R5-6* composition = Reference(CompositionSemiStructured)
 
 * result = Reference(ObservationNarrative)
 * conclusion = "Beginnende Großzehengrundgelenksarthrose, links mehr als rechts. Z.n. Umstellungsosteotomie des MFK1 links."
@@ -37,9 +37,9 @@ Usage: #example
 * presentedForm
   * contentType = #application/pdf
   * language = #de-DE
-//R5  * pages = 1
+//R5-6  * pages = 1
   * url = "http://hl7.eu/fhir/imaging-r5/Binary/BinarySemistructuredReport"
-//R5  * url = "http://hl7.eu/fhir/imaging-r5/Binary/BinarySemistructuredReport"
+//R5-6  * url = "http://hl7.eu/fhir/imaging-r5/Binary/BinarySemistructuredReport"
 
 // Instance: BinarySemiStructuredReport
 // InstanceOf: Binary

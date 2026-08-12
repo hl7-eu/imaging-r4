@@ -4,14 +4,14 @@ Title: "DocumentReference: Renderable format with basic metadata"
 Description: "MHD DocumentReference for unstructured report."
 Usage: #example
 * masterIdentifier[+]
-//R5* identifier[+]
+//R5-6* identifier[+]
   * system = "urn:ietf:rfc:3986"
   * use = #usual
   * value = "http://unstructured-report.example.com"
 * status = #current
 * date = "2024-01-01T00:00:00Z"
 * extension[modality].valueCodeableConcept = http://dicom.nema.org/resources/ontology/DCM#CT
-//R5* modality = http://dicom.nema.org/resources/ontology/DCM#CT
+//R5-6* modality = http://dicom.nema.org/resources/ontology/DCM#CT
 
 * category[+]
   * coding[priority-area] = http://hl7.eu/fhir/health-data-api/CodeSystem/eehrxf-document-priority-category-cs#Medical-Imaging
@@ -26,16 +26,16 @@ Usage: #example
     * valueCodeableConcept
       * coding[+] = $sct#774007
       * coding[+] = $sct#38266002
-//R5* bodySite
-//R5  * concept
-//R5    * coding[+] = $sct#774007 
-//R5    * coding[+] = $sct#38266002
+//R5-6* bodySite
+//R5-6  * concept
+//R5-6    * coding[+] = $sct#774007 
+//R5-6    * coding[+] = $sct#38266002
 
 
 * content[+]
   * extension[profile]
     * valueCanonical = Canonical(BundleReportMinimalMetadataEuImaging)
-//R5  * profile[bundle-report-minimal-metadata].valueCanonical = Canonical(BundleReportMinimalMetadataEuImaging)
+//R5-6  * profile[bundle-report-minimal-metadata].valueCanonical = Canonical(BundleReportMinimalMetadataEuImaging)
   * attachment[0]
     * contentType = #application/fhir+json
     * url = "Bundle/bundle-report-minimal-metadata-unstructured"
@@ -59,7 +59,7 @@ InstanceOf: $EuOrganization
 Title: "Organization: unstructured report"
 Description: "Organization used in the unstructured report"
 Usage: #example
-//R5// * id = a66ff79c-d233-424c-b3c4-1f1520fbea40
+//R5-6// * id = a66ff79c-d233-424c-b3c4-1f1520fbea40
 * name = "Rediologie Zentrum Bremen"
 * contact
   * telecom[+]
@@ -89,9 +89,9 @@ Usage: #example
 * entry[Patient]
   * fullUrl = "urn:uuid:1d3c5b7a-9e0f-4a2b-8c6d-5e4f3a2b1c0d"
   * resource = PatientUnstructuredReport
-//R5* entry[+]
-//R5  * fullUrl = "urn:uuid:a66ff79c-d233-424c-b3c4-1f1520fbea40"
-//R5  * resource = OrganizationUnstructuredReport
+//R5-6* entry[+]
+//R5-6  * fullUrl = "urn:uuid:a66ff79c-d233-424c-b3c4-1f1520fbea40"
+//R5-6  * resource = OrganizationUnstructuredReport
 
 Instance: DiagnosticReportMinimalMetadata
 InstanceOf: DiagnosticReportEuImagingMinimalMetadata
@@ -114,7 +114,7 @@ Usage: #example
 
 
 * imagingStudy[study-identifier].identifier
-//R5* study[study-identifier].identifier
+//R5-6* study[study-identifier].identifier
   * system = "urn:dicom:uid"
   * value = "1.2.840.113619.2.55.3.604688123.783.1704067200.1"
   * type = http://dicom.nema.org/resources/ontology/DCM#110180 "Study Instance UID"
