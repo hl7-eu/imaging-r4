@@ -27,12 +27,12 @@ E.g. based on information from [DICOM part 16](https://dicom.nema.org/medical/di
 // * extension[derivedFrom] contains srImagingSelection 1..* 
 // * extension[derivedFrom][srImagingSelection].value[x] only Reference( SrInstanceImagingSelectionEuImaging )
 
-* derivedFrom 1..*
+* derivedFrom 0..*
   * insert SliceElement( #profile, $this )
 * derivedFrom contains study 1..1 
 * derivedFrom[study] only Reference( ImagingStudyEuImaging )
   * ^short = "The study the radiation information relates to."
-//R5* derivedFrom 1..*
+//R5* derivedFrom 0..*
 //R5  * insert SliceElement( #profile, $this )
 //R5* derivedFrom contains study 1..1 and dicomSrInstance 0..* 
 //R5* derivedFrom[dicomSrInstance] only Reference( SrInstanceImagingSelectionEuImaging )

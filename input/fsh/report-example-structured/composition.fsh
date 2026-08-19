@@ -157,6 +157,10 @@ Usage: #example
   * entry[finding][+] = Reference (StressWmsi11)
   * entry[finding][+] = Reference (NarrativeFindingsAll)
   * entry[image] = Reference (WMSIImage)
+  * entry[image][+] = Reference (StructuredKeyImageRestR4)
+  * entry[image][+] = Reference (StructuredKeyImageStressR4)
+//R5  * entry[image][+] = Reference (StructuredKeyImageRest)
+//R5  * entry[image][+] = Reference (StructuredKeyImageStress)
 // /////////////////// IMPRESSION SECTION //////////////////////////
 * section[impression]
   * title = "Impression"

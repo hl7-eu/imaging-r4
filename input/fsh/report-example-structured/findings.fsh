@@ -16,14 +16,26 @@ RuleSet: WMSIObservation( obsCode, obsDisplay, code, display, bodyCode, bodyDisp
 * derivedFrom = Reference(WMSIImage)
 
 Instance: WMSIImage
-InstanceOf: DocumentReference
-Title: "DocumentReference: structured report WMSI image"
+InstanceOf: Media
+Title: "Media: structured report WMSI image"
 Description: "Shows the WMSI graphs."
 Usage: #example
-* status = #current
-* content.attachment
+* status = #completed
+* type = http://terminology.hl7.org/CodeSystem/media-type#image "Image"
+* subject = Reference(PatientStructuredReport)
+* content
   * contentType = #image/png
   * id = "ig-loader-structured-wmsi.drawio.png"
+
+//R5Instance: WMSIImage
+//R5InstanceOf: DocumentReference
+//R5Title: "DocumentReference: structured report WMSI image"
+//R5Description: "Shows the WMSI graphs."
+//R5Usage: #example
+//R5* status = #current
+//R5* content.attachment
+//R5  * contentType = #image/png
+//R5  * id = "ig-loader-structured-wmsi.drawio.png"
 
 Instance: RestWmsi01
 InstanceOf: Observation
