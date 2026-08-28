@@ -61,7 +61,7 @@ Profile for DocumentReference resources used in the EEHRxF context, based on the
   * ^definition = "This field may be used to provide additional information about the anatomical region of interest for the imaging manifest."
 
 // modality
-* extension contains $CrossVersion-R5-DocumentReference.modality-for-R4 named modality 1..1
+* extension contains $CrossVersion-R5-DocumentReference.modality-for-R4 named modality 1..*
 
 // content profile representation. Defining a custom extension as the CV spanshot 2 fails. TBD replace with CV snapshot 3 when available.
 // * content 1..1
