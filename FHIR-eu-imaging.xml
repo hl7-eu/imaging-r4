@@ -28,6 +28,7 @@
 <artifact id="Composition/CompositionSemiStructured" key="Composition-CompositionSemiStructured" name="Composition: semi-structured"/>
 <artifact id="Composition/CompositionStructured" key="Composition-CompositionStructured" name="Composition: structured report"/>
 <artifact id="StructureDefinition/DeviceEuImaging" key="StructureDefinition-DeviceEuImaging" name="Device: Imaging Device"/>
+<artifact id="Device/UltrasoundScannerExample" key="Device-UltrasoundScannerExample" name="Device: ultrasound scanner"/>
 <artifact id="StructureDefinition/DiagnosticReportEuImaging" key="StructureDefinition-DiagnosticReportEuImaging" name="DiagnosticReport: Imaging Report"/>
 <artifact id="StructureDefinition/DiagnosticReportEuImagingMinimalMetadata" key="StructureDefinition-DiagnosticReportEuImagingMinimalMetadata" name="DiagnosticReport: Imaging Report Minimal Metadata"/>
 <artifact id="StructureDefinition/diagnostic-report-obligation-eu-imaging" key="StructureDefinition-diagnostic-report-obligation-eu-imaging" name="DiagnosticReport: Imaging Report: Obligations"/>
@@ -65,13 +66,16 @@
 <artifact id="StructureDefinition/AccessionNumberIdentifierEuImaging" key="StructureDefinition-AccessionNumberIdentifierEuImaging" name="Identifier: Accession Number"/>
 <artifact id="StructureDefinition/SopInstanceUidIdentifierEuImaging" key="StructureDefinition-SopInstanceUidIdentifierEuImaging" name="Identifier: SOP Instance UID"/>
 <artifact id="StructureDefinition/StudyInstanceUidIdentifierEuImaging" key="StructureDefinition-StudyInstanceUidIdentifierEuImaging" name="Identifier: Study Instance UID"/>
+<artifact id="Basic/SrInstanceImagingSelectionExample" key="Basic-SrInstanceImagingSelectionExample" name="ImagingSelection: DICOM SR instance"/>
+<artifact id="Basic/KeyImageImagingSelectionDicomInstanceExample" key="Basic-KeyImageImagingSelectionDicomInstanceExample" name="ImagingSelection: DICOM key image instance"/>
+<artifact id="Basic/ImagingSelectionStudyExample" key="Basic-ImagingSelectionStudyExample" name="ImagingSelection: referenced imaging study"/>
 <artifact id="StructureDefinition/ImagingStudyEuImaging" key="StructureDefinition-ImagingStudyEuImaging" name="ImagingStudy: General"/>
 <artifact id="StructureDefinition/imaging-study-obligation-eu-imaging" key="StructureDefinition-imaging-study-obligation-eu-imaging" name="ImagingStudy: General: Obligations"/>
 <artifact id="ImagingStudy/ImagingStudySemiStructuredReport1" key="ImagingStudy-ImagingStudySemiStructuredReport1" name="ImagingStudy: semi-structured report 1"/>
 <artifact id="ImagingStudy/ImagingStudySemiStructuredReport2" key="ImagingStudy-ImagingStudySemiStructuredReport2" name="ImagingStudy: semi-structured report 2"/>
 <artifact id="ImagingStudy/ImagingStudyStructuredReport" key="ImagingStudy-ImagingStudStructuredReport" name="ImagingStudy: structured-report study"/>
 <artifact id="StructureDefinition/ImagingSelectionKeyImageEuImaging" key="StructureDefinition-ImagingSelectionKeyImageEuImaging" name="Key images represented as an ImagingSelection for R4"/>
-<artifact id="Media/KeyImageDicomInstanceExampleR4" key="Media-KeyImageDicomInstanceExampleR4" name="Media: DICOM key image instance"/>
+<artifact id="Media/KeyImageDicomInstanceExample" key="Media-KeyImageDicomInstanceExample" name="Media: DICOM key image instance"/>
 <artifact id="StructureDefinition/MediaKeyImageEuImaging" key="StructureDefinition-MediaKeyImageEuImaging" name="Media: Key Image"/>
 <artifact id="Media/StructuredKeyImageRestR4" key="Media-StructuredKeyImageRestR4" name="Media: key image rest"/>
 <artifact id="Media/StructuredKeyImageStressR4" key="Media-StructuredKeyImageStressR4" name="Media: key image stress"/>
@@ -149,6 +153,7 @@
 <artifact id="ValueSet/ImEUValueSetAllSnomedLoinc" key="ValueSet-ImEUValueSetAllSnomedLoinc" name="ValueSet: All SNOMED CT and LOINC Codes"/>
 <artifact id="ValueSet/im-anatomical-region-valueset" key="ValueSet-im-anatomical-region-valueset" name="ValueSet: Anatomical Region"/>
 <artifact id="ValueSet/valueset-diagnosticreport-report-support-info" key="ValueSet-valueset-diagnosticreport-report-support-info" name="ValueSet: DiagnosticReport supportInfo codes"/>
+<artifact id="ValueSet/gestational-age-loinc-eu-imaging" key="ValueSet-gestational-age-loinc-eu-imaging" name="ValueSet: Gestational Age (LOINC)"/>
 <artifact deprecated="true" id="ValueSet/DeviceEuImagingType" key="ValueSet-DeviceEuImagingType" name="ValueSet: Imaging Device Type"/>
 <artifact id="ValueSet/im-procedure-type" key="ValueSet-im-procedure-type" name="ValueSet: Imaging Procedure Type"/>
 <artifact id="ValueSet/im-imaging-study-performer-type" key="ValueSet-im-imaging-study-performer-type" name="ValueSet: Imaging Study Performer Type Value Set"/>

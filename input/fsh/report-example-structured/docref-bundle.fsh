@@ -5,6 +5,7 @@ Description: "MHD DocumentReference for structured report."
 Usage: #example
 * masterIdentifier[+]
 //R5* identifier[+]
+  * type = https://profiles.ihe.net/ITI/MHD/CodeSystem/IHE.MHD.MHDIdentifierType#uniqueId
   * system = "urn:ietf:rfc:3986"
   * use = #usual
   * value = "http://structured-report.example.com"
@@ -18,10 +19,10 @@ Usage: #example
   * coding[imaging-report] = $loinc#85430-7 "Diagnostic imaging report - example sections and entries"
 * subject = Reference(PatientStructuredReport)
 * custodian = Reference(OrganizationStructuredReport)
-* extension[bodysite]
-  * extension[concept]
-    * valueCodeableConcept
-      * coding[+] = $sct#67734004
+// * extension[bodysite]
+//   * extension[concept]
+//     * valueCodeableConcept
+//       * coding[+] = $sct#67734004
 //R5* bodySite
 //R5  * concept
 //R5    * coding = $sct#67734004
