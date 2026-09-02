@@ -31,15 +31,16 @@ Description: "Represents a key image by identifying DICOM selection data (study,
     $artifact-title-url        named title 0..1 and
     $artifact-description-url  named description 0..1
 
-* extension[performer]
-  * ^slicing.discriminator[0].type = #value
-  * ^slicing.discriminator[0].path = "url"
-  * ^slicing.discriminator[+].type = #pattern
-  * ^slicing.discriminator[=].path = "extension('function').value"
-  * ^slicing.rules = #open
-  * ^slicing.ordered = false
-* extension[performer] contains pracRole 0..1 and device 0..1
-* extension[performer][pracRole].extension[function].value[x] = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRF
-* extension[performer][pracRole].extension[actor].value[x] only Reference($EuPractitionerRole)
-* extension[performer][device].extension[function].value[x] = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
-* extension[performer][device].extension[actor].value[x] only Reference(DeviceEuImaging)
+// Requires a SUSHI fix for reslicing an inherited named extension slice.
+//* extension[performer]
+//  * ^slicing.discriminator[0].type = #value
+//  * ^slicing.discriminator[0].path = "url"
+//  * ^slicing.discriminator[+].type = #pattern
+//  * ^slicing.discriminator[=].path = "extension('function').value"
+//  * ^slicing.rules = #open
+//  * ^slicing.ordered = false
+//* extension[performer] contains pracRole 0..1 and device 0..1
+//* extension[performer][pracRole].extension[function].value[x] = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PRF
+//* extension[performer][pracRole].extension[actor].value[x] only Reference($EuPractitionerRole)
+//* extension[performer][device].extension[function].value[x] = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#DEV
+//* extension[performer][device].extension[actor].value[x] only Reference(DeviceEuImaging)

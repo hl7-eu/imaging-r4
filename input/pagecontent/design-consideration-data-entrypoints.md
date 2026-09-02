@@ -22,7 +22,7 @@ classDiagram
  class CompositionEuImaging{ <<Composition>>}
  
  DiagnosticReportEuImaging --> ImagingStudyEuImaging: imagingStudy
- DiagnosticReportEuImaging --> CompositionEuImaging: extension[composition]
+ DiagnosticReportEuImaging --> CompositionEuImaging: extension[DiagnosticReportCompositionR5]
  CompositionEuImaging --> DiagnosticReportEuImaging: extension[diagnosticReport-reference]
 
  note for DiagnosticReportEuImaging "entry point for report"
