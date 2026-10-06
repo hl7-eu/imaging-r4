@@ -57,7 +57,8 @@ Profile for DocumentReference resources used in the EEHRxF context, based on the
 //R5    * coding from ValueSetAnatomicalRegion (extensible)
 
 // modality
-* extension contains $ihe-mado-docref-modality named modality 1..1
+* extension contains $ihe-mado-docref-modality named modality 1..*
+//R5* modality 1..*
 
 // content profile representation
 * content 1..1

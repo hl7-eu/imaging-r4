@@ -38,7 +38,7 @@ dependencies:
   
   hl7.fhir.eu.health-data-api: 1.0.0-ballot
   # hl7.fhir.eu.health-data-api: current
-  hl7.fhir.eu.base: 2.0.0
+  hl7.fhir.eu.base: 2.0.0-ballot
   hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.eu.extensions.r4:
     uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
@@ -179,7 +179,7 @@ menu:
     Structural: artifacts-structural.html
     Obligations: artifacts-obligations.html
     All: artifacts.html
-    Examples: artifacts.html#example-example-instances
+    Examples: examples.html
 
 
   R5: https://build.fhir.org/ig/hl7-eu/imaging-r5/
