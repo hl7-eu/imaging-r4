@@ -9,6 +9,8 @@ Description: "Basic resource holding cross-version extensions for Imaging Select
 * insert SetFmmAndStatusRule( 1, draft )
 * subject only Reference( $EuPatient )
 
+* extension 2..*
+* modifierExtension 1..*
 * extension[derivedFrom]
   * insert SliceElement( #profile, value.resolve(\) )
 * extension[derivedFrom] contains study 1..1
@@ -16,7 +18,7 @@ Description: "Basic resource holding cross-version extensions for Imaging Select
 * extension[derivedFrom][study].value[x] only Reference( ImagingStudyEuImaging )
 
 Profile: SrInstanceImagingSelectionEuImaging
-Parent: $CrossVersion-R5-ImagingSelection-for-R4
+Parent: ImagingSelectionEuImaging
 Title: "Basic-ImagingSelection: DICOM SR Instance"
 Description: "Imaging Selection referring to a DICOM SR instance"
 * insert SetFmmAndStatusRule( 1, draft )

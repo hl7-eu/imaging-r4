@@ -86,7 +86,7 @@ Usage: #example
 * subject = Reference(PatientStructuredReport)
 * modifierExtension[status].valueCode = #available
 * extension[code].valueCodeableConcept = http://dicom.nema.org/resources/ontology/DCM#113000 "Of Interest"
-* extension[derivedFrom].valueReference = Reference(ImagingStudyStructuredReport)
+* extension[derivedFrom][study].valueReference = Reference(ImagingStudyStructuredReport)
 * identifier[sopInstanceUid]
   * type = MissingDicomTerminology#00080018
   * system = "urn:dicom:uid"
