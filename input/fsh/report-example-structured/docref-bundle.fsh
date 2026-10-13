@@ -5,6 +5,7 @@ Description: "MHD DocumentReference for structured report."
 Usage: #example
 * masterIdentifier[+]
 //R5* identifier[+]
+  * type = https://profiles.ihe.net/ITI/MHD/CodeSystem/IHE.MHD.MHDIdentifierType#uniqueId
   * system = "urn:ietf:rfc:3986"
   * use = #usual
   * value = "http://structured-report.example.com"
@@ -18,10 +19,10 @@ Usage: #example
   * coding[imaging-report] = $loinc#85430-7 "Diagnostic imaging report - example sections and entries"
 * subject = Reference(PatientStructuredReport)
 * custodian = Reference(OrganizationStructuredReport)
-* extension[bodysite]
-  * extension[concept]
-    * valueCodeableConcept
-      * coding[+] = $sct#67734004
+// * extension[bodysite]
+//   * extension[concept]
+//     * valueCodeableConcept
+//       * coding[+] = $sct#67734004
 //R5* bodySite
 //R5  * concept
 //R5    * coding = $sct#67734004
@@ -80,8 +81,21 @@ Usage: #example
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/HRObservation"
   * resource = HRObservation
 * entry[+]
-  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/WMSIImage"
+  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Media/WMSIImage"
+//R5  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/WMSIImage"
   * resource = WMSIImage
+* entry[+]
+  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Media/StructuredKeyImageRestR4"
+  * resource = StructuredKeyImageRestR4
+* entry[+]
+  * fullUrl = "http://hl7.eu/fhir/imaging-r5/Media/StructuredKeyImageStressR4"
+  * resource = StructuredKeyImageStressR4
+//R5* entry[+]
+//R5  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageRest"
+//R5  * resource = StructuredKeyImageRest
+//R5* entry[+]
+//R5  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageStress"
+//R5  * resource = StructuredKeyImageStress
 * entry[+]
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/RestWmsi01"
   * resource = RestWmsi01
@@ -187,12 +201,6 @@ Usage: #example
 * entry[+]
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/Observation/NarrativeFindingsAll"
   * resource = NarrativeFindingsAll
-* entry[+]
-  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageRest"
-  * resource = StructuredKeyImageRest
-* entry[+]
-  * fullUrl = "http://hl7.eu/fhir/imaging-r5/DocumentReference/StructuredKeyImageStress"
-  * resource = StructuredKeyImageStress
 * entry[+]
   * fullUrl = "http://hl7.eu/fhir/imaging-r5/ServiceRequest/ComeBackNextYearServiceRequest"
   * resource = ComeBackNextYearServiceRequest

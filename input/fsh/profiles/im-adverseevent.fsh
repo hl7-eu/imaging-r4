@@ -13,8 +13,7 @@ Description: """Adverse Event that occurred during an imaging procedure."""
 * subjectMedicalHistory
   * insert SliceElement( #profile, $this )
 * subjectMedicalHistory contains allergy 0..*
-* subjectMedicalHistory[allergy]
-* subjectMedicalHistory only Reference($EuAllergyIntolerance)
+* subjectMedicalHistory[allergy] only Reference($EuAllergyIntolerance)
 
 //R5* contributingFactor
 //R5  * insert SliceElement( #profile, $this )

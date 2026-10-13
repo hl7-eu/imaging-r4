@@ -1,48 +1,63 @@
-Instance: StructuredKeyImageRest
-InstanceOf: DocumentReferenceKeyImageEuImaging
-Title: "DocumentReference: key image rest"
+Instance: StructuredKeyImageRestR4
+InstanceOf: MediaKeyImageEuImaging
+Title: "Media: key image rest"
 Description: "Key image showing the ultrasound at rest."
 Usage: #example
-* status = #current
-//R5* status = #current
-
 * subject = Reference(PatientStructuredReport)
-* content[content]
-  * attachment
-    * contentType = #image/png
-    * id = "ig-loader-structured-keyimage-rest.png"
-    * url = "DocumentReference/StructuredKeyImageRest"
-  * extension[thumbnail]
-    * url = $document-reference-thumbnail-url
-    * valueBoolean = false
+* type = http://terminology.hl7.org/CodeSystem/media-type#image "Image"
+* modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
+* content
+  * contentType = #image/png
+  * id = "ig-loader-structured-keyimage-rest.png"
+  * url = "Media/StructuredKeyImageRestR4"
 
-
-* extension[modality].valueCodeableConcept = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
-//R5* modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
-* category[imkeyimages]
-  * coding[keyimagecode] = $loinc#55113-5 "Key images Document Radiology"
-
-    
-Instance: StructuredKeyImageStress
-InstanceOf: DocumentReferenceKeyImageEuImaging
-Title: "DocumentReference: key image stress"
+Instance: StructuredKeyImageStressR4
+InstanceOf: MediaKeyImageEuImaging
+Title: "Media: key image stress"
 Description: "Key image showing the ultrasound during stress."
 Usage: #example
-* status = #current
-//R5* status = #current
 * subject = Reference(PatientStructuredReport)
+* type = http://terminology.hl7.org/CodeSystem/media-type#image "Image"
+* modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
+* content
+  * contentType = #image/png
+  * id = "ig-loader-structured-keyimage-stress.png"
+  * url = "Media/StructuredKeyImageStressR4"
 
-* content[content]
-  * attachment
-    * contentType = #image/png
-    * id = "ig-loader-structured-keyimage-stress.png"
-    * url = "DocumentReference/StructuredKeyImageStress"
-  * extension[thumbnail]
-    * url = $document-reference-thumbnail-url
-    * valueBoolean = false
-
-
-* extension[modality].valueCodeableConcept = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
+//R5Instance: StructuredKeyImageRest
+//R5InstanceOf: DocumentReferenceKeyImageEuImaging
+//R5Title: "DocumentReference: key image rest"
+//R5Description: "Key image showing the ultrasound at rest."
+//R5Usage: #example
+//R5* status = #current
+//R5* subject = Reference(PatientStructuredReport)
+//R5* content[content]
+//R5  * attachment
+//R5    * contentType = #image/png
+//R5    * id = "ig-loader-structured-keyimage-rest.png"
+//R5    * url = "DocumentReference/StructuredKeyImageRest"
+//R5  * extension[thumbnail]
+//R5    * url = $document-reference-thumbnail-url
+//R5    * valueBoolean = false
 //R5* modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
-* category[imkeyimages]
-  * coding[keyimagecode] = $loinc#55113-5 "Key images Document Radiology"
+//R5* category[imkeyimages]
+//R5  * coding[keyimagecode] = $loinc#55113-5 "Key images Document Radiology"
+
+//R5Instance: StructuredKeyImageStress
+//R5InstanceOf: DocumentReferenceKeyImageEuImaging
+//R5Title: "DocumentReference: key image stress"
+//R5Description: "Key image showing the ultrasound during stress."
+//R5Usage: #example
+//R5* status = #current
+//R5* subject = Reference(PatientStructuredReport)
+//R5* content[content]
+//R5  * attachment
+//R5    * contentType = #image/png
+//R5    * id = "ig-loader-structured-keyimage-stress.png"
+//R5    * url = "DocumentReference/StructuredKeyImageStress"
+//R5  * extension[thumbnail]
+//R5    * url = $document-reference-thumbnail-url
+//R5    * valueBoolean = false
+//R5* modality = http://dicom.nema.org/resources/ontology/DCM#US "Ultrasound"
+//R5* category[imkeyimages]
+//R5  * coding[keyimagecode] = $loinc#55113-5 "Key images Document Radiology"
