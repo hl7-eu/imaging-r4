@@ -4,7 +4,7 @@ canonical: http://hl7.eu/fhir/imaging
 
 
 name: HL7EuImagingStudyReport
-title: HL7 Europe Imaging Report R4
+title: EU Imaging Report R4
 description: This guide describes how a Imaging Report can be represented in the European REALM using FHIR R4.
 status: draft # draft | active | retired | unknown
 experimental: false
