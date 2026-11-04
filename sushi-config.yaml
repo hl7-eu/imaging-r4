@@ -38,7 +38,7 @@ dependencies:
   
   hl7.fhir.eu.health-data-api: 1.0.0-ballot
   # hl7.fhir.eu.health-data-api: current
-  hl7.fhir.eu.base: 2.0.0-ballot
+  hl7.fhir.eu.base: 2.0.1
   hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.eu.extensions.r4:
     uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
@@ -134,6 +134,11 @@ parameters:
   releaselabel: 0.1.1-build
   
   special-url-base: https://www.xt-ehr.eu/specifications/fhir
+  # Root OID per package (assigned by HL7 Europe); per-resource OIDs are kept in ig-src/oids.liquid.ini
+
+  auto-oid-root: 2.16.840.1.113883.2.51.22.10
+
+
   # add all fsh results to _data directory
   # produce-jekyll-data: true
   # broken links are not errors, but warnings
